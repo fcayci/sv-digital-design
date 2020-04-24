@@ -250,7 +250,7 @@ def test_edges(f):
 
 if __name__ == "__main__":
     from random import randint
-    with open('lab4_p3_testvector.txt', 'w') as tvf:
+    with open('alu2020_testvector.txt', 'w') as tvf:
         for f in models:
             test_randoms(f, 100)
             test_edges(f)

@@ -92,24 +92,3 @@ assign vreg = (res[XLEN-1] != areg[XLEN-1]) && (
     ((opreg == 4'b1000) && (areg[XLEN-1] != breg[XLEN-1])) );
 
 endmodule
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
