@@ -434,10 +434,10 @@ def q25(r):
 def q26(r):
     '''Şekil 3 de verilen devrenin contamination gecikmesini hesaplayınız.'''
     r = format(r, '04x')
-    #tand = 6*int(r[0], 16) + 10
-    #tor = 6*int(r[1], 16) + 10
-    txor = 6*int(r[2], 16) + 10
-    #tnot = 6*int(r[3], 16) + 10
+    #tand = (6*int(r[0], 16) + 10)//2
+    #tor = 6*int(r[1], 16) + 10)//2
+    txor = (6*int(r[2], 16) + 10)//2
+    #tnot = (6*int(r[3], 16) + 10)//2
 
     # contamination delay is shortest path,
     # which is min(c0 -> s0, x0 -> s0) since first is one xor,
