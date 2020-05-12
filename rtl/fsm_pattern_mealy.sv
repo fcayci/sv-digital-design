@@ -29,7 +29,7 @@ always_comb
 
 // output logic
 always_comb
-    if (state == S2 && A) unlock = 1;
-    else unlock = 0;
+    if (state == S2 && A) unlock = 1'b1;
+    else unlock = 1'b0;
 
 endmodule
