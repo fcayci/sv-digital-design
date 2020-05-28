@@ -10,7 +10,7 @@ module alu2020 #(parameter XLEN = 32, INPUT_REG = 1, OUTPUT_REG = 1) (
 logic [XLEN-1:0] areg, breg, res;
 logic [XLEN:0] subreg;
 logic nreg, vreg, creg, zreg, err;
-logic [XLEN-1:0] opreg;
+logic [3:0] opreg;
 logic [4:0] shamt;
 
 // if generate blogu, giris ve cikislara opsyonel register atama
@@ -65,7 +65,9 @@ assign asr =  $signed({areg, 1'b0}) >>> shamt;
 
 always_comb
 begin
-    {creg, err} = 2'b0; // defaults, will be overwritten if necessary
+    // defaults, will be overwritten if necessary
+    creg = 1'b0;
+    err = 1'b0;
     if      (opreg == 4'b0000) {creg, res} = areg + breg;
     else if (opreg == 4'b1000) begin
         creg = ~subreg[XLEN];
@@ -85,7 +87,7 @@ begin
     end
 end
 
-assign zreg = (res == 'b0);
+assign zreg = (res === 0);
 assign nreg = res[XLEN-1];
 assign vreg = (res[XLEN-1] != areg[XLEN-1]) && (
     ((opreg == 4'b0000) && (areg[XLEN-1] == breg[XLEN-1])) ||
