@@ -27,4 +27,9 @@ module tb_fsm_counter ();
         $stop;
     end
 
+    initial
+    begin
+        $dumpvars(0, tb_fsm_counter);
+    end
+
 endmodule

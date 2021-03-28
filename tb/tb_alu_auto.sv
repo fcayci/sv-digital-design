@@ -31,11 +31,11 @@ module tb_alu_auto ();
     begin
         // file descriptor
         int fd;
-        int flagerr = 0, serr = 0, ntest = 0;
+        static int flagerr = 0, serr = 0, ntest = 0;
 
         // test vector dosyasini ac. bu dosya ile ayni klasorde olacak. (videodaki gibi modelsim projeniz sim/ klasorunun altinda ise)
         // yoksa asagidan dogru yere yonlendirin
-        fd = $fopen ("../misc/alu2020_testvector.txt", "r");
+        fd = $fopen ("misc/alu2020_testvector.txt", "r");
         // eger acildiysa devam et
         if (fd) begin
             // sonuna kadar dosyayi oku
@@ -68,6 +68,11 @@ module tb_alu_auto ();
 
         $fclose(fd);
         $stop;
+    end
+
+    initial
+    begin
+        $dumpvars(0, tb_alu_auto);
     end
 
 endmodule

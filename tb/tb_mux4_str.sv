@@ -9,7 +9,7 @@ module tb_mux4_str ();
     logic [1:0] s;
     logic [2:0] y;
 
-    mux4str dut0(a, b, c, d, s, y);
+    mux4_str dut0(a, b, c, d, s, y);
 
     initial
     begin
@@ -21,6 +21,11 @@ module tb_mux4_str ();
         s = 2'b11; #10;
 
         $stop;
+    end
+
+    initial
+    begin
+        $dumpvars(0, tb_mux4_str);
     end
 
 endmodule

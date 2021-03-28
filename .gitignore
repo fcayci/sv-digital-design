@@ -1,3 +1,4 @@
-impl/
-sim/
-misc/
+.DS_Store
+*.vcd
+*.vvp
+*.lx2

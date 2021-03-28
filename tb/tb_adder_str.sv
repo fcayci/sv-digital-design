@@ -33,4 +33,9 @@ module tb_adder_str ();
         $stop;
     end
 
+    initial
+    begin
+        $dumpvars(0, tb_adder_str);
+    end
+
 endmodule

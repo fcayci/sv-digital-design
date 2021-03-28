@@ -32,4 +32,9 @@ module tb_memory ();
         $stop;
     end
 
+    initial
+    begin
+        $dumpvars(0, tb_memory);
+    end
+
 endmodule
