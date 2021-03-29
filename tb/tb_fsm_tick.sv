@@ -33,9 +33,4 @@ module tb_fsm_tick ();
         $stop;
     end
 
-    initial
-    begin
-        $dumpvars(0, tb_fsm_tick);
-    end
-
 endmodule

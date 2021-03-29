@@ -2,3 +2,7 @@
 *.vcd
 *.vvp
 *.lx2
+*.xml
+__pycache__/
+sim_build/
+dumpy.sv

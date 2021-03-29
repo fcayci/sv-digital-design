@@ -30,9 +30,4 @@ module tb_counter ();
         $stop;
     end
 
-    initial
-    begin
-        $dumpvars(0, tb_counter);
-    end
-
 endmodule

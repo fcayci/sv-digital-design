@@ -35,9 +35,4 @@ module tb_fsm_pattern ();
         $stop;
     end
 
-    initial
-    begin
-        $dumpvars(0, tb_fsm_pattern);
-    end
-
 endmodule

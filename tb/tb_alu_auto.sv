@@ -70,9 +70,4 @@ module tb_alu_auto ();
         $stop;
     end
 
-    initial
-    begin
-        $dumpvars(0, tb_alu_auto);
-    end
-
 endmodule

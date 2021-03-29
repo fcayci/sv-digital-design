@@ -23,9 +23,4 @@ module tb_mux4_str ();
         $stop;
     end
 
-    initial
-    begin
-        $dumpvars(0, tb_mux4_str);
-    end
-
 endmodule
