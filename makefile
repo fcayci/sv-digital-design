@@ -49,8 +49,8 @@ simulate: clean
 display: clean dumpy.sv
 	@echo ">>> Displaying design " $(MODULE)
 	$(QUIET)$(CC) $(CFLAGS) -o $(MODULE).vvp -s dumpy $(VERILOG_SOURCES) dumpy.sv
-	$(SIM) -n $(MODULE).vvp -lxt2
-	$(VIEW) $(MODULE).lx2
+	$(QUIET)$(SIM) -n $(MODULE).vvp -lxt2
+	$(QUIET)$(VIEW) $(MODULE).lx2
 
 dumpy.sv:
 	@echo '>>> Creating top module for dumping waveform'
